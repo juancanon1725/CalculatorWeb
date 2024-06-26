@@ -1,42 +1,28 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Calculadora</title>
+    <title>Calculator</title>
 </head>
 <body>
-<h1>Calculadora</h1>
-<form id="calculatorForm">
-    <input type="number" name="a" step="any" required>
-    <select name="operation">
-        <option value="add">+</option>
-        <option value="subtract">-</option>
-        <option value="multiply">*</option>
-        <option value="divide">/</option>
-    </select>
-    <input type="number" name="b" step="any" required>
-    <button type="button" onclick="calculate()">Calcular</button>
+<h1>Calculator</h1>
+<form action="/calculate" method="post" style="display: inline;">
+    <label for="number1">Number 1:</label>
+    <input type="text" id="number1" name="number1" th:value="${number1}"><br><br>
+
+    <button id="operation" name="operation" type="submit" formaction="/case" value="+">+</button>
+    <button id="operation" name="operation" type="submit" formaction="/case" value="-">-</button>
+    <button id="operation" name="operation" type="submit" formaction="/case" value="*">*</button>
+    <button id="operation" name="operation" type="submit" formaction="/case" value="/">/</button>
+    <br><br>
+
+    <button type="submit">Calculate</button>
 </form>
-<h2>Resultado: <span id="result">0.0</span></h2>
-<div id="error" style="color:red"></div>
 
-<script>
-    async function calculate() {
-        const form = document.getElementById('calculatorForm');
-        const formData = new FormData(form);
-        const params = new URLSearchParams(formData);
+<form action="/clear" method="post" style="display: inline;">
+    <button type="submit">AC</button>
+</form>
 
-        try {
-            const response = await fetch(`/api/calculate?${params}`);
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            const result = await response.text();
-            document.getElementById('result').textContent = result;
-            document.getElementById('error').textContent = '';
-        } catch (error) {
-            document.getElementById('error').textContent = error.message;
-        }
-    }
-</script>
+<h2>Result: <span th:text="${result}">0</span></h2>
+<p th:if="${error}" th:text="${error}"></p>
 </body>
 </html>
