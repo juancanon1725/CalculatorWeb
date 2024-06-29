@@ -33,7 +33,7 @@ Para ejecutar el proyecto maven se el siguiente comando
 
 Y probamos el browser:
 
-![localhost:8080/calculator.html](localhost:8080/calculator.html)
+[https://localhost:8080/calculator.html](https://localhost:8080/calculator.html)
 
 ## Ejecución en AWS
 
