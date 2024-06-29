@@ -40,7 +40,7 @@ Ejecutamos el proyecto con el comando `mvn spring-boot:run`
 
 ![running](https://github.com/juancanon1725/CalculatorWeb/assets/98672541/52db56e3-2ad9-4b57-915e-098b67380236)
 
-Y probamos el formulario `calculator.html` con `calculator`
+Y probamos el formulario `calculator.html` con `calculate`
 
 ![calculator](https://github.com/juancanon1725/CalculatorWeb/assets/98672541/b4ba2756-f2d6-4117-8b09-e22790fc2513)
 
