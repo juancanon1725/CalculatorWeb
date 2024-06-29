@@ -31,7 +31,7 @@ Para ejecutar el proyecto maven se el siguiente comando
  mvn spring-boot:run
 ```
 
-Y probamos el browser:
+Y probamos en el browser la URL:
 
 [https://localhost:8080/calculator.html](https://localhost:8080/calculator.html)
 
