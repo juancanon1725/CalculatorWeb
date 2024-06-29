@@ -4,7 +4,7 @@ Juan Pablo Poveda Cañon
 
 # Taller 5 - Calculadora Web MVC
 
-#Arquitectura
+## Arquitectura
 
 ![ArquitectyraCalculadora - Marco básico de Azure (2019)](https://github.com/juancanon1725/CalculatorWeb/assets/98672541/388e8b34-ac12-4716-af3f-e5e62e71f8b8)
 
