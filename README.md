@@ -30,6 +30,11 @@ Para ejecutar el proyecto maven se el siguiente comando
 ```
  mvn spring-boot:run
 ```
+
+Y probamos el browser:
+
+[localhost:8080/calculator.html](localhost:8080/calculator.html)
+
 ## Ejecución en AWS
 
 Clonamos el repositorio en la instancia de AWS:
